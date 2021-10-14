@@ -2,9 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Python HTML</title>
+    <title>URL Shortener</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        label {
+            display:inline-block;
+            margin-bottom:.5rem;
+            font-size:.875rem;
+            font-weight:400;
+            color:#232f34;
+            text-align:left;
+        }
+        .input-group-text {
+            display:flex;
+            background-color:#4a6572;
+            color:#fff;
+            padding-top:0.5rem;
+            padding-bottom:0.5rem;
+            padding-left:1.25rem;
+            padding-right:1.25rem;
+            margin-bottom:0;
+            font-size:1rem;
+            font-weight:400;
+            line-height:1.5;
+            text-align:center;
+            align-items:center;
+            white-space:nowrap;
+<!--            height:2.5rem;-->
+            border-radius:.25rem;
+<!--            border:1px solid;-->
+<!--            border-top-right-radius:0;-->
+<!--            border-bottom-right-radium:0;-->
+         }
+         .form-control{
+            display:block;
+            flex:1 1 auto;
+            font-size:1rem;
+<!--            height:2.5rem;-->
+            padding:.5em;
+            margin-bottom:0;
+            font-weight:400;
+            line-height:1.5;
+            color:#333;
+            background-color:#fff;
+            background-clip:padding-box;
+<!--            border:1px solid;-->
+            border-radius:.25rem;
+            border-color:#464646;
+            width:1%;
+         }
+         .input-group{
+            display:flex;
+            position: relative;
+            flex-wrap:wrap;
+            align-items:stretch;
+            width:100%;
+         }
+         .input-group-prepend{
+            margin-right:-1px;
+            display:flex;
+         }
+         .form{
+            display:block;
+            margin-top:0em;
+         }
+         .row{
+            display:flex;
+            flex-wrap:wrap;
+            margin-right:5px;
+            margin-left:5px;
+         }
+         .col{
+            flex-basis:0;
+            flex-grow:1;
+            max-width:100%;
+         }
+         .main-row{
+            flex:1;
+            display:flex;
+         }
+         .main-col{
+            flex:1;
+            display:flex;
+            flex-flow:column;
+         }
+    </style>
 </head>
 <body>
-<h1>Test Local Host</h1>
+<h2>Create Link</h2>
+<div class="main-row row">
+    <div class="main-col col">
+    <form name="createALink" class="form" method="post">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="shortKey" class>Short Key</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">go/</span>
+                        </div>
+                        <input name="shortKey" id="shortKey" placeholder="Short Key" required type="text" class="form-control" value><br/><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="longLink" class>Long Link</label>
+                    <div class="input-group">
+                        <input name="longLink" id="longLink" placeholder="Long Link" required type="text" class="form-control" value><br/><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <br/>
+                <button type="submit" id="submit-create"><b>Create Link</b></button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
 </body>
 </html>
