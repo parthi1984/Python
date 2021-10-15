@@ -88,45 +88,55 @@
             display:flex;
             flex-flow:column;
          }
+
+
+
     </style>
 </head>
 <body>
 <h2>Create Link</h2>
 <div class="main-row row">
     <div class="main-col col">
-    <form name="createALink" class="form" method="post">
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="shortKey" class>Short Key</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">go/</span>
+        <form name="createALink" class="form" method="post">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="shortKey" class>Short Key</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">go/</span>
+                            </div>
+                            <input name="shortKey" id="shortKey" placeholder="Short Key" required type="text"
+                                   class="form-control" maxlength="10" pattern="[a-z|0-9]{3,10}" title="Min 3 to 10 characters" value><br/><br/>
                         </div>
-                        <input name="shortKey" id="shortKey" placeholder="Short Key" required type="text" class="form-control" value><br/><br/>
                     </div>
                 </div>
             </div>
-        </div>
-        <br/>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="longLink" class>Long Link</label>
-                    <div class="input-group">
-                        <input name="longLink" id="longLink" placeholder="Long Link" required type="text" class="form-control" value><br/><br/>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="longLink" class>Long Link</label>
+                        <div class="input-group">
+                            <input name="longLink" id="longLink" placeholder="Long Link" required type="url"
+                                   class="form-control" value><br/><br/>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col">
-                <br/>
-                <button type="submit" id="submit-create"><b>Create Link</b></button>
+            <div class="row">
+                <div class="col">
+                    <br/>
+                    <button type="submit" id="submit-create"><b>Create Link</b></button>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <br><h4>{hidden}</h4>
     </div>
 </div>
 </body>
