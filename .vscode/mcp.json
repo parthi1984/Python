@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"my-mcp-server-47a16f9e": {
+			"type": "stdio",
+			"command": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+			"args": [
+				"simple-mcp-server/main.py"
+			]
+		}
+	},
+	"inputs": []
+}
