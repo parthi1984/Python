@@ -1,0 +1,24 @@
+{
+  "type": "APL",
+  "version": "1.4",
+  "mainTemplate": {
+    "parameters": ["payload"],
+    "items": [
+      {
+        "type": "Container",
+        "items": [
+          {
+            "type": "Text",
+            "text": "Hello from Echo Show!",
+            "style": "textStylePrimary",
+            "textAlign": "center",
+            "fontSize": "40px"
+          }
+        ],
+        "alignItems": "center",
+        "justifyContent": "center",
+        "height": "100vh"
+      }
+    ]
+  }
+}
